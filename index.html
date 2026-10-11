@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт про котеджне містечко</title>
+    <meta name="author" content="Цілуйко Дар'я">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- перемикач меню та форми -->
+    <input type="checkbox" id="menu-toggle" class="css-toggle" aria-hidden="true">
+    <input type="checkbox" id="form-toggle" class="css-toggle" aria-hidden="true">
+
+    <!-- оверлеї для закриття панелей -->
+    <label for="menu-toggle" class="menu-overlay" aria-hidden="true"></label>
+    <label for="form-toggle" class="form-overlay" aria-hidden="true"></label>
+
+    <!-- шапка -->
+    <header>
+        <div class="header-left-group">
+            <label for="menu-toggle" class="menu-btn" title="Меню розділів">
+                <span></span>
+            </label>
+            <div class="header-titles">
+                <h1>Кленовий <span class="accent-text">Сад</span></h1>
+                <p class="highlight">місце щасливих спогадів за 12 км від міста</p>
+            </div>
+        </div>
+
+        <label for="form-toggle" class="reopen-form-btn" title="Відкрити форму заявки">
+            Стати мешканцем
+        </label>
+    </header>
+
+    <!-- ліва панель (розділи) -->
+    <aside class="aside_nav" id="sidebar-menu">
+        <div class="aside_nav-header">
+            <p class="semi-bold">Розділи</p>
+        </div>
+        <nav class="nav-list">
+            <ul>
+                <li><label for="menu-toggle"><a href="#about">Про містечко</a></label></li>
+                <li><label for="menu-toggle"><a href="#gallery">Фотоальбом</a></label></li>
+                <li><label for="menu-toggle"><a href="#pricing">Прайс-лист</a></label></li>
+                <li><label for="menu-toggle"><a href="#news">Новини</a></label></li>
+                <li><label for="menu-toggle"><a href="#social">Соціальні програми</a></label></li>
+                <li><label for="menu-toggle"><a href="#reviews">Відгуки</a></label></li>
+                <li><label for="menu-toggle"><a href="#faq">FAQ</a></label></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- центральна частина (гловне) -->
+    <main>
+
+        <!-- про містечко -->
+        <section class="about" id="about">
+            <h2 class="about-title">КЛЕНОВИЙ <span class="accent-title">САД</span></h2>
+            <div class="about-description-box">
+                <p><span class="highlight-text">Кленовий Сад</span> - забудова на 64 ділянки серед природного кленового гаю, за 12 км від центру міста. Ділянки від 6 до 12 соток, під приватну садибну забудову, з можливістю замовити типовий проєкт будинку або будувати за власним.</p>
+            </div>
+
+            <div class="showcase">
+                <div class="showcase-col-left">
+                    <img src="images/house2.jpg" alt="Приклад будинку 2">
+                </div>
+                <div class="showcase-col-right">
+                    <img src="images/house1.jpg" alt="Приклад будинку 1">
+                    <a href="realty.html" class="showcase-btn">Нерухомість &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ффотоальбом -->
+        <section class="album" id="gallery">
+            <h2 class="album-title">ФОТОАЛЬБОМ</h2>
+            <div class="gallery-grid">
+                <article class="gallery-card">
+                    <img src="images/room1.jpg" alt="Вітальня з каміном">
+                    <div class="gallery-card-info">
+                        <h3>Вітальня з каміном</h3>
+                    </div>
+                </article>
+                <article class="gallery-card">
+                    <img src="images/room2.jpg" alt="Кухня-їдальня">
+                    <div class="gallery-card-info">
+                        <h3>Кухня-їдальня</h3>
+                    </div>
+                </article>
+                <article class="gallery-card">
+                    <img src="images/room3.jpg" alt="Головна спальня">
+                    <div class="gallery-card-info">
+                        <h3>Головна спальня</h3>
+                    </div>
+                </article>
+                <article class="gallery-card">
+                    <img src="images/room4.jpg" alt="Дитяча кімната">
+                    <div class="gallery-card-info">
+                        <h3>Дитяча кімната</h3>
+                    </div>
+                </article>
+                <article class="gallery-card">
+                    <img src="images/room5.jpg" alt="Ванна кімната">
+                    <div class="gallery-card-info">
+                        <h3>Ванна кімната</h3>
+                    </div>
+                </article>
+                <article class="gallery-card">
+                    <img src="images/room6.jpg" alt="Тераса з садом">
+                    <div class="gallery-card-info">
+                        <h3>Тераса з садом</h3>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- табличка порівняльна з прайсом -->
+        <section class="pricing" id="pricing">
+            <h2 class="pricing-title">ПОРІВНЯННЯ ПРОЄКТІВ ТА ВАРТІСТЬ</h2>
+
+            <div class="pricing-table-wrapper">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Проєкт котеджу</th>
+                            <th scope="col">Загальна площа</th>
+                            <th scope="col">Кількість кімнат</th>
+                            <th scope="col">Ділянка</th>
+                            <th scope="col">Термін будівництва</th>
+                            <th scope="col">Вартість</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="model-name">«Затишний»</th>
+                            <td>115 м²</td>
+                            <td>3 кімнати (1 поверх)</td>
+                            <td>6 соток</td>
+                            <td>5–6 місяців</td>
+                            <td class="price-cell">від $68 000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="model-name">«Сімейний»</th>
+                            <td>160 м²</td>
+                            <td>4 кімнати + тераса (2 поверхи)</td>
+                            <td>8–10 соток</td>
+                            <td>6–8 місяців</td>
+                            <td class="price-cell">від $92 000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="model-name">«Преміум»</th>
+                            <td>220 м²</td>
+                            <td>5 кімнат + гараж на 2 авто</td>
+                            <td>12 соток</td>
+                            <td>8–10 місяців</td>
+                            <td class="price-cell">від $128 000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- новини -->
+        <section class="news" id="news">
+            <h2 class="news-title">НОВИНИ ТА ПУБЛІКАЦІЇ</h2>
+
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-card-body">
+                        <div class="news-card-badge">Будівництво</div>
+                        <time class="news-date" datetime="2026-10-02">2 жовтня 2026</time>
+                        <h3 class="news-card-heading">Завершено прокладання газопроводу для II черги</h3>
+                        <p class="news-card-excerpt">
+                            Усі 24 нові ділянки підключено до централізованої газової магістралі з індивідуальними лічильниками.
+                        </p>
+                        <a href="#" class="news-read-more">Читати далі</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card-body">
+                        <div class="news-card-badge">Інфраструктура</div>
+                        <time class="news-date" datetime="2026-09-24">24 вересня 2026</time>
+                        <h3 class="news-card-heading">Відкриття зони відпочинку та кленового скверу</h3>
+                        <p class="news-card-excerpt">
+                            Облаштовано доріжки для прогулянок, встановлено освітлення на сонячних батареях та дитячий майданчик.
+                        </p>
+                        <a href="#" class="news-read-more">Читати далі</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card-body">
+                        <div class="news-card-badge">Події</div>
+                        <time class="news-date" datetime="2026-09-15">15 вересня 2026</time>
+                        <h3 class="news-card-heading">Осінній день відкритих дверей у «Кленовому Саду»</h3>
+                        <p class="news-card-excerpt">
+                            Запрошуємо на екскурсію готовими будинками, знайомство з архітекторами та дегустацію чаю на терасі.
+                        </p>
+                        <a href="#" class="news-read-more">Читати далі</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- соц програми -->
+        <section class="social" id="social">
+            <h2 class="social-title">СОЦІАЛЬНІ ПРОГРАМИ</h2>
+            <p class="social-subtitle">
+                Для мешканців нашого містечка діють програми пільгового підключення та розстрочки, а також безкоштовна консультація рієлтора, комунальних служб та інші послуги.
+            </p>
+            <div class="social-cards">
+                <article class="program-card-dark-green">
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">Молода родина</h3>
+                        <p class="program-card-text">Розстрочка до 36 місяців без першого внеску для пар до 35 років.</p>
+                    </div>
+                    <a href="case1.html" class="program-card-btn" aria-label="Детальніше про програму Молода родина">→</a>
+                </article>
+
+                <article class="program-card-pink">
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">Захисники та ветерани</h3>
+                        <p class="program-card-text">Знижка 10% на ділянку та пільгове підключення до мереж.</p>
+                    </div>
+                    <a href="case2.html" class="program-card-btn" aria-label="Детальніше про програму Захисники та ветерани">→</a>
+                </article>
+
+                <article class="program-card-olive">
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">Багатодітні родини</h3>
+                        <p class="program-card-text">Компенсація вартості підключення газу для родин з трьома і більше дітьми.</p>
+                    </div>
+                    <a href="case3.html" class="program-card-btn" aria-label="Детальніше про програму Багатодітні родини">→</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- рев'юс -->
+        <section class="reviews" id="reviews">
+            <h2 class="reviews-title">ВІДГУКИ МЕШКАНЦІВ</h2>
+
+            <div class="reviews-grid">
+                <article class="review-card">
+                    <div class="review-rating" role="img" aria-label="Оцінка 5 з 5">★★★★★</div>
+                    <blockquote class="review-text">
+                        Переїхали сюди пів року тому і це найкраще рішення для сім'ї. Тиша, чисте лісове повітря та ідеальна безпека для дітей на майданчику.
+                    </blockquote>
+                    <div class="review-author">
+                        <img src="images/Comment2.jpg" alt="Олена Ковальчук" class="review-avatar">
+                        <div class="review-author-info">
+                            <span class="review-author-name">Олена Ковальчук</span>
+                            <span class="review-author-meta">мешканка будинку “Затишний”</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-rating" role="img" aria-label="Оцінка 4 з 5">★★★★</div>
+                    <blockquote class="review-text">
+                        Задоволений якістю теплоізоляції та автономними комунікаціями. Взимку в будинку тепло, а рахунки значно нижчі, ніж у міській квартирі.
+                    </blockquote>
+                    <div class="review-author">
+                        <img src="images/Comment1.jpg" alt="Максим Дмитренко" class="review-avatar">
+                        <div class="review-author-info">
+                            <span class="review-author-name">Максим Дмитренко</span>
+                            <span class="review-author-meta">мешканець будинку “Преміум”</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-rating" role="img" aria-label="Оцінка 5 з 5">★★★★★</div>
+                    <blockquote class="review-text">
+                        Особливо вдячна сервісній службі містечка: територія завжди доглянута, газони підстрижені, а всі побутові питання вирішуються за лічені хвилини.
+                    </blockquote>
+                    <div class="review-author">
+                        <img src="images/Comment3.jpg" alt="Марта Войчук" class="review-avatar">
+                        <div class="review-author-info">
+                            <span class="review-author-name">Марта Войчук</span>
+                            <span class="review-author-meta">мешканка будинку “Сімейний”</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <a href="#" class="reviews-more-link">Читати більше</a>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq" id="faq">
+            <h2 class="faq-title">ЧАСТІ ЗАПИТАННЯ</h2>
+            <p class="faq-subtitle">Відповіді на найпоширеніші питання щодо проживання, сервісу та купівлі</p>
+
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary class="faq-question">Які комунікації вже підведені до ділянок?</summary>
+                    <div class="faq-answer">
+                        <p>До кожної ділянки підведено централізоване газопостачання, електрику потужністю 15 кВт із трифазним лічильником, центральне водопостачання з артезіанської свердловини та швидкісний оптоволоконний інтернет.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">Чи забезпечена територія містечка цілодобовою охороною?</summary>
+                    <div class="faq-answer">
+                        <p>Так, територія закрита по периметру, діє пропускна система з автоматичним зчитуванням номерів авто, встановлено відеоспостереження 24/7 та працює власна патрульна служба безпеки.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">Чи можна змінити планування або замовити індивідуальний проєкт?</summary>
+                    <div class="faq-answer">
+                        <p>Так, наше архітектурне бюро адаптує внутрішні перегородки та планування під ваші потреби безкоштовно на етапі погодження договору, дотримуючись загальної архітектурної концепції фасаду.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">Які умови розстрочки та першого внеску доступні?</summary>
+                    <div class="faq-answer">
+                        <p>Ми пропонуємо безвідсоткову розстрочку від забудовника на термін до 24 місяців із першим внеском від 30%. Також доступні партнерські іпотечні програми з пільговими ставками.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <!-- форма заявки -->
+    <aside class="right_col" id="form">
+        <div class="form_box">
+            <div class="form_top_row">
+                <h3>Стати мешканцем</h3>
+                <label for="form-toggle" class="close-form-btn" title="Закрити форму">&times;</label>
+            </div>
+            <p class="form_text">Залиште заявку й наш менеджер обов’язково зв’яжеться з вами протягом дня.</p>
+
+            <form class="form" action="#" method="post">
+                <label for="name">Ім'я та прізвище</label>
+                <input type="text" id="name" name="name" required placeholder="Олександр Коваль">
+
+                <label for="phone">Номер телефону</label>
+                <input type="tel" id="phone" name="phone" required pattern="^\+?[0-9\s\-\(\)]{10,15}$" placeholder="+38 (067) 000-00-00">
+
+                <label for="email">Електронна пошта</label>
+                <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+
+                <label for="plot">Площа ділянки</label>
+                <select id="plot" name="plot" required>
+                    <option value="" disabled selected>Оберіть розмір ділянки</option>
+                    <option value="6">6 соток (затишна)</option>
+                    <option value="8">8 соток (сімейна)</option>
+                    <option value="10">10 соток (простора)</option>
+                    <option value="12">12 соток (преміум у гаю)</option>
+                </select>
+
+                <label for="comment">Коментар або побажання</label>
+                <textarea id="comment" name="comment" rows="3" placeholder="Додаткові питання..."></textarea>
+
+                <div class="form-checkbox-group">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">Згоден(-на) на обробку персональних даних</label>
+                </div>
+
+                <button type="submit" class="form_button">Надіслати заявку</button>
+            </form>
+        </div>
+    </aside>
+
+    <!-- футер -->
+    <footer class="footer">
+        <div class="footer_top_grid">
+            <div class="footer_col brand_col">
+                <h4 class="footer_heading">КЛЕНОВИЙ САД</h4>
+                <p class="footer_desc">
+                    Дбаємо про затишок вашої оселі, безпеку території та зручність щоденного життя.
+                </p>
+            </div>
+
+            <div class="footer_col">
+                <h4 class="footer_heading">ПРОСТІР</h4>
+                <ul class="footer_links">
+                    <li><a href="#about">Про нас</a></li>
+                    <li><a href="realty.html">Житловий фонд</a></li>
+                    <li><a href="#social">Наші послуги</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_col">
+                <h4 class="footer_heading">ДОПОМОГА</h4>
+                <ul class="footer_links">
+                    <li><a href="#">Кабінет мешканця</a></li>
+                    <li><a href="#form">Зворотний зв'язок</a></li>
+                    <li><a href="tel:+380670000000">+380 67 000 00 00</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_col socials_col">
+                <h4 class="footer_heading">МИ В СОЦМЕРЕЖАХ</h4>
+                <div class="social_icons">
+                    <a href="https://instagram.com" target="_blank" class="social_btn" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" class="social_btn" aria-label="TikTok">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+                    </a>
+                    <a href="https://t.me" target="_blank" class="social_btn" aria-label="Telegram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_divider"></div>
+        <div class="footer_bottom_row">
+            <p class="copyright">© 2026 Кленовий Сад. Усі права захищені.</p>
+            <div class="legal_links">
+                <a href="#">Політика конфіденційності</a>
+                <a href="#">Умови використання</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
