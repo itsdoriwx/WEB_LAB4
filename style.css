@@ -1,88 +1,87 @@
-   html {
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 section {
-    scroll-margin-top: 110px;
+  scroll-margin-top: 110px;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Figtree", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Figtree", sans-serif;
 }
 
 body {
-    background-color: #FFFBF7;
-    color: #1E3309;
-    min-height: 100vh;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 240px minmax(0, 1fr);
-    grid-template-rows: auto 1fr auto;
-    transition: grid-template-columns 0.3s ease;
+  background-color: #FFFBF7;
+  color: #1E3309;
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  transition: grid-template-columns 0.3s ease;
 }
 
 /* перемикачі, оверлеї */
-
 .css-toggle {
-    position: fixed;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .menu-overlay, .form-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.45);
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
 }
 
 .menu-overlay {
-    z-index: 150;
+  z-index: 150;
 }
 
 .form-overlay {
-    z-index: 250;
+  z-index: 250;
 }
 
 /* ШАПКА */
 
 header {
-    grid-column: 1 / -1;
-    background-color: #1E3309;
-    min-height: 100px;
-    padding: 18px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  grid-column: 1 / -1;
+  background-color: #1E3309;
+  min-height: 100px;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header-left-group {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 header h1 {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.1;
-    color: #FFFFFF;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #FFFFFF;
 }
 
 header h1 .accent-text {
-    color: #FCA9AA;
+  color: #FCA9AA;
 }
 
 header .highlight {
-    font-size: 14px;
-    font-weight: 600;
-    color: #C7D4A8;
-    margin-top: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #C7D4A8;
+  margin-top: 4px;
 }
 
 .menu-btn {
@@ -189,14 +188,24 @@ nav.nav-list li a:hover {
 
 /* згортання лівого меню (ПК та планшети) */
 @media (min-width: 768px) {
-  body:has(#menu-toggle:checked) {
+  body {
     grid-template-columns: 0px minmax(0, 1fr);
   }
 
-  body:has(#menu-toggle:checked) aside.aside_nav {
+  aside.aside_nav {
     width: 0;
     padding: 0;
     opacity: 0;
+  }
+
+  body:has(#menu-toggle:checked) {
+    grid-template-columns: 240px minmax(0, 1fr);
+  }
+
+  body:has(#menu-toggle:checked) aside.aside_nav {
+    width: 100%;
+    padding-top: 35px;
+    opacity: 1;
   }
 }
 
@@ -411,8 +420,7 @@ main {
 .pricing-table-wrapper {
   width: 100%;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  border-radius: 16px;
+  border-radius: 10px;
   background-color: #849A28;
 }
 
@@ -856,7 +864,7 @@ main {
   text-align: justify;
 }
 
-/* форма заявки (ПКБ планшети) */
+/* форма заявки (ПК, планшети) */
 aside.right_col {
   position: fixed;
   top: 0;
@@ -1118,14 +1126,14 @@ footer.footer {
 /* планшети та телефони */
 @media (max-width: 1180px) {
   .news-grid, .reviews-grid {
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
 
 /* ПЛАНШЕТ */
 @media (min-width: 768px) and (max-width: 1180px) {
-  body {
+  body:has(#menu-toggle:checked) {
     grid-template-columns: 200px minmax(0, 1fr);
   }
 
